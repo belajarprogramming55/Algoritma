@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     const int MAX_MOBIL = 100;
-    string merek[MAX_MOBIL], model[MAX_MOBIL];
+    string merk[MAX_MOBIL], model[MAX_MOBIL];
     int tahun[MAX_MOBIL];
     double harga[MAX_MOBIL];
     int jumlah = 0;
@@ -27,7 +27,7 @@ int main() {
                 } else {
                     cout << "\nMasukkan data mobil ke-" << jumlah + 1 << endl;
                     cout << "Merk  : ";
-                    cin >> merek[jumlah];
+                    cin >> merk[jumlah];
                     cout << "Model : ";
                     cin >> model[jumlah];
                     cout << "Tahun : ";
@@ -51,14 +51,15 @@ int main() {
                          << setw(15) << "Model"
                          << setw(10) << "Tahun"
                          << setw(15) << "Harga\n";
-                    cout << "-----------------------------------------------------\n";
-
                     cout << fixed << setprecision(0);
+
+                    cout << "\nNo | Merek         | Model        | Tahun | Harga\n";
+                    cout << "------------------------------------------------------------\n";
 
                     for (int i = 0; i < jumlah; i++) {
                         cout << left
                              << setw(5)  << i + 1
-                             << setw(15) << merek[i]
+                             << setw(15) << merk[i]
                              << setw(15) << model[i]
                              << setw(10) << tahun[i]
                              << setw(15) << harga[i] << endl;
